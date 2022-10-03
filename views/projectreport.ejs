@@ -1,0 +1,54 @@
+<%-include("partials/header");-%>
+
+<div class="container">
+
+    <div>
+        <div class="container-fluid"><%=projeto.nomeDoProjeto%></div>
+    </div>
+    <div class="row">
+        <div class="col-12"><%=projeto.descricao%></div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-6">Data prevista para início do projeto: <%=projeto.dataInicio%></div>
+        <div class="col-6">Data prevista para término do projeto: <%=projeto.dataTermino%></div>
+    </div>
+
+    
+    <div class="col-row">
+        <div class="col-large-auto">
+            O valor total deste projeto é de: <%=projeto.valor.toLocaleString("de-DE",{minimumFractionDigits: 2, maximumFractionDigits: 2})%>
+           
+        </div>
+    </div>
+
+    <div class="col-row">
+        <div class="col-large-auto">
+            Desenvolvimento do Projeto: <%=projeto.percentageDone%> %
+        </div>
+    </div>
+
+    <div class="col-row">
+        <div class="col-large-auto">
+           
+            O projeto atual se encontra em análise pelo setor <%=projeto.setorAtual%> e sua última atualização foi feita por <%=ultimaAtu%>, do setor <%=ultSetor%>. Seu status encontra-se <%=projetoStatus%>.
+        </div>
+    </div>
+    <div class="col-row">
+        <div class="col-large-auto">
+            Comentário(s) Problema: <%=projeto.problemComment%>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <a class="a" href="/projetos"> Voltar para Projetos</a>
+    </div>
+
+    
+</div>
+
+<%-include("partials/footer");-%>

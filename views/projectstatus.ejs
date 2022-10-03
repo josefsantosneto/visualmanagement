@@ -1,0 +1,52 @@
+<%-include("partials/header");-%>
+
+<div class="mainDiv">
+
+    <div className="formlogin">
+        <div class="formprojetostatus">
+            <form action="/updatestatus" method="POST">
+                
+                <h3>Alteração de Status do Projeto</h3>
+                <p>Selecione um projeto</p>
+                <select id="projeto" name="proid">
+                    <%projs.forEach(function(projeto){%>
+                        <option value= "<%=projeto._id%>"><%=projeto.nomeDoProjeto%></option>
+                    <%});%>
+
+                 </select>
+                 
+
+                <p>Selecione o Status do Projeto</p>
+
+                <select id="status" name="status">
+                    <% selectList.forEach(function(select){ %>
+                        <option value=<%=select.value%>><%=select.selection%></option>
+                    <% }); %>
+
+                    
+                </select>
+
+               <textarea type="text" name="problemComment" placeholder="Digite seu comentário sobre situação do projeto"></textarea>
+                
+          
+
+               
+               <input type="text" name="percentageDone" placeholder="Digite o % de Andamento">
+                <input type="text" name="setor" placeholder="Digite o setor atual da etapa">
+                
+                
+                
+                <button type="Submit">Cadastrar</button>
+                <a class="a" href="/home_menu">Voltar ao Menu</a>
+                <a class="a" href="/logout">Sair</a>
+
+            </form>
+        </div>
+
+</div>
+
+
+
+
+
+<%-include("partials/footer");-%>

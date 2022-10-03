@@ -1,0 +1,33 @@
+<%-include("partials/header");-%>
+
+<div class="container mw-100 mh-100 mainDiv">
+
+    <div className="formlogin">
+        <div class="formprojeto">
+            <form action="/projectentry" method="POST">
+                
+                <h3>Entrada de Novos Projetos</h3>
+                <input type="text" name="nomeprojeto" placeholder="Nome do Projeto">
+                <input type="text" name="solicitacao" placeholder="Número solicitacao">
+                <input type="text" name="sei" placeholder="Número SEI">
+                <input type="date" name="dataInicio" placeholder="Data de Início">
+                <input type="date" name="dataTermino" placeholder="Data de Término">
+
+
+                <input type="number" step=0.01 name="valor" pattern='\d' placeholder="Valor em R$">
+                <textarea name="descricao" cols="30" rows="10" placeholder="Descrição do Projeto"></textarea>
+                
+                <button type="text">Cadastrar</button>
+                <a class="a" href="/home_menu">Voltar ao Menu</a>
+                <a class="a" href="/logout">Sair</a>
+
+            </form>
+        </div>
+
+</div>
+
+
+
+
+
+<%-include("partials/footer");-%>

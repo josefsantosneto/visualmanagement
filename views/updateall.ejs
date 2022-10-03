@@ -1,0 +1,78 @@
+<%-include("partials/header");-%>
+
+<form action="/updateall" method="POST">
+    <div class="container mw-100 mh-100">
+            <div class="row rep"></div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <select id="projeto" name="proId" class="w-50 text-center">
+                            <%projetos.forEach(function(projeto){%>
+                                <option value= "<%=projeto._id%>"><%=projeto.nomeDoProjeto%></option>
+                            <%});%>
+                
+                         </select>
+                    </div>
+                </div>
+
+    
+                
+            </div>
+            <div class="row">
+                <div class="col-2 text-white">Nome do Projeto</div>
+                <div class="col-2 text-white">Descrição</div>
+                <div class="col-2 text-white">Comentario Atualização</div>
+                <div class="col-1 text-white">Setor Atual</div>               
+                <div class="col-1 text-white">SEI</div>
+                <div class="col-1 text-white">Valor</div>
+                <div class="col-1 text-white">Número de Solicitação</div>
+                <div class="col-1 text-white">Data Início</div>
+                <div class="col-1 text-white">Data Término</div>
+                
+                
+
+
+            </div>
+    
+
+
+       
+            <div class="row text-center">
+                
+                <div class="col-2"><input class="rep-field w-100" name="nomeprojeto" type="text"></div>
+                <div class="col-2"><input class="rep-field w-100" name="descricao" type="text"></div>
+                <div class="col-2"><input class="rep-field w-100"  name="comentAtu" type="text"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="setorAtual" type="text"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="sei" type="text"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="valor" type="text"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="numeroSol" type="text"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="dataInicio" type="date"></div>
+                <div class="col-1"><input class="rep-field w-100"  name="dataTermino" type="date"></div>
+    
+            </div>
+   
+        
+
+    
+        <div class="text-center rep"></div>
+        <div class="text-center"><button type="submit">Atualizar</button></div>
+</form>       
+    <div class="row rep"></div>
+    <div class="text-center">
+        <div class="">
+           <!-- <select name="tipoOperacao" class="text-center">
+                <option value="atualizar">Atualizar</option>
+                <option value="excluir">Excluir</option>
+            </select> -->
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <a class="a" href="/menuadm"> Voltar para Menu</a>
+    </div>
+
+    
+</div>
+
+<%-include("partials/footer");-%>

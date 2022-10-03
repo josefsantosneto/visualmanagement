@@ -1,0 +1,52 @@
+<%-include("partials/header");-%>
+
+<div class="container mw-100 mh-100">
+            <div class="row rep"></div>
+            <div class="row">
+                
+            </div>
+            <div class="row">
+                <div class="col-1 text-white">Marcar</div>
+                <div class="col-2 text-white">Usuário</div>
+                <div class="col-3 text-white">Email</div>
+                <div class="col-3 text-white">Permissão</div>
+                <div class="col-3 text-white">Setor</div>              
+            </div>
+
+    <form action="/deleteuser" method="POST">
+        <% users.forEach(function(user){ %>
+            <div class="row">
+                <div class="col-1 text-center"><input class="rep-field" type="checkbox" name="checkbox" value="<%=user._id%>"></div>
+                <div class="col-2 text-center"><input class="rep-field" disabled name="userName" type="text" value="<%=user.username%>"></div>
+                <div class="col-3 text-center"><input class="rep-field" disabled name="email" type="text" value="<%=user.email%>"></div>
+                <div class="col-3 text-center"><input class="rep-field"  disabled name="type" type="text" value="<%=user.type%>"></div>
+                <div class="col-3 text-center"><input class="rep-field"  disabled name="setor" type="text" value="<%=user.setor%>"></div>
+            
+    
+            </div>
+        <% }); %>
+        
+
+    
+        <div class="text-center rep"></div>
+        <div class="text-center"><button type="submit">Apagar selecionados</button></div>
+    </form>       
+    <div class="row rep"></div>
+    <div class="text-center">
+        <div class="">
+           <!-- <select name="tipoOperacao" class="text-center">
+                <option value="atualizar">Atualizar</option>
+                <option value="excluir">Excluir</option>
+            </select> -->
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <a class="a" href="/menuadm"> Voltar para Menu</a>
+    </div>
+
+    
+</div>
+
+<%-include("partials/footer");-%>

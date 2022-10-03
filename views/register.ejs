@@ -1,0 +1,29 @@
+<%-include("partials/header");-%>
+
+<div class="mainDiv">
+
+    <div className="formlogin">
+        <div class="formlogin formreg">
+            <form action="/register" method="post">
+                
+                <img class="logogeo" src="/img/LogoGEOatual.jpg" alt="">
+                <input type="text" autocomplete="off" name="username" placeholder="Usuário">
+                <input type="email" autocomplete="off" name="email" placeholder="email">
+                <input type="text" autocomplete="off" name="setor" placeholder="Setor">
+                <input type="password" autocomplete="off" name="password" placeholder="Senha">
+                <input type="password" autocomplete="off" name="confirmpassword" placeholder="Confirme a Senha">
+
+                <button enabled type="submit">Registrar</button>
+                <a class="a" href="/">Login</a>
+                
+
+            </form>
+        </div>
+
+</div>
+
+
+
+
+
+<%-include("partials/footer");-%>

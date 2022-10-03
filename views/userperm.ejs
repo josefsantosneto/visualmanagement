@@ -1,0 +1,45 @@
+<%-include("partials/header");-%>
+
+<div class="container mw-100 mh-100 mainDiv">
+
+    <div className="formlogin">
+        <div class="formlogin userperm">
+            <form action="/userperm" method="POST">
+                <div class="row">
+                
+
+                </div>
+                <div class="row"><h5> Alterar Permissão</h3></div>
+                <div class="row">
+                    <legend class="text-center h6">Usuário</legend>
+                    <select name="usernameId" class="form-control text-center">
+                        <%users.forEach(function(foundUser){%>
+                        <option class="text-center" value="<%=foundUser._id%>">
+                            <%=foundUser.username%>    
+                        </option>
+                        <%});%>
+                    </select>
+                </div>
+                
+                <div class="row">
+                    <legend class="text-center h6">Permissão</legend>
+                <select name="type" class="form-control">
+                    <%userTypes.forEach(function(userType){%>
+                        <option class="text-center" value="<%=userType.value%>"><%=userType.selection%></option>
+                    <%});%>
+                </select>
+                </div>  
+
+                <button autocomplete="off" type="submit">Alterar</button>
+                <a class="a" href="/menuadm">Voltar</a>
+
+            </form>
+        </div>
+
+</div>
+
+
+
+
+
+<%-include("partials/footer");-%>
